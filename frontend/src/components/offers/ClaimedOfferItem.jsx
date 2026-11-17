@@ -2,12 +2,12 @@ import PropTypes from "prop-types";
 import FeedbackForm from "./FeedbackForm.jsx";
 import StarRating from "../shared/StarRating.jsx";
 import { formatDate } from "../../utils/format.js";
+import { daysFromToday } from "./offerDates.js";
 import "./ClaimedOfferItem.css";
 
 function ClaimedOfferItem({ offer, currentUserId, onRelease, onFeedback }) {
   const myFeedback = offer.feedback.find((f) => f.userId === currentUserId);
-  const isPast =
-    offer.status === "completed" || new Date(offer.date) < new Date();
+  const isPast = offer.status === "completed" || daysFromToday(offer.date) < 0;
 
   return (
     <article className="claimed-offer-item">

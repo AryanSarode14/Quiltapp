@@ -83,7 +83,7 @@ function OffersPage() {
     runAction(
       offer,
       "POST",
-      `You claimed a spot with ${offer.offerer.displayName}. See how to reach them under My claimed spots.`,
+      `Spot claimed. Find how to reach ${offer.offerer.displayName} under My claimed spots.`,
     );
 
   const handleRelease = (offer) =>

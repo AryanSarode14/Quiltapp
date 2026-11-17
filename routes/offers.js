@@ -225,7 +225,9 @@ router.post("/:id/feedback", requireAuth, async (req, res, next) => {
     if (!offer) {
       return res.status(404).json({ error: "That offer no longer exists." });
     }
-    const isPast = offer.status === "completed" || offer.date < new Date();
+    const startOfToday = new Date();
+    startOfToday.setUTCHours(0, 0, 0, 0);
+    const isPast = offer.status === "completed" || offer.date < startOfToday;
     if (!isPast) {
       return res.status(400).json({
         error: "You can leave feedback once the offer is completed.",
