@@ -54,7 +54,8 @@ function MyOffersPage() {
   }
 
   async function handleDelete(offer) {
-    if (!window.confirm(`Delete “${offer.title}”? This can't be undone.`)) return;
+    if (!window.confirm(`Delete “${offer.title}”? This can't be undone.`))
+      return;
     try {
       await apiFetch(`/api/offers/${offer._id}`, { method: "DELETE" });
       reload();

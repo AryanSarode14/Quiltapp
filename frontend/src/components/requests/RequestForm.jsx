@@ -20,14 +20,20 @@ function RequestForm({ initialValues, onSubmit, submitLabel, onCancel }) {
   const [saving, setSaving] = useState(false);
 
   function update(name) {
-    return (event) => setValues((prev) => ({ ...prev, [name]: event.target.value }));
+    return (event) =>
+      setValues((prev) => ({ ...prev, [name]: event.target.value }));
   }
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const missing = ["title", "description", "category", "area", "neededBy", "contactNote"].filter(
-      (field) => !values[field].trim(),
-    );
+    const missing = [
+      "title",
+      "description",
+      "category",
+      "area",
+      "neededBy",
+      "contactNote",
+    ].filter((field) => !values[field].trim());
     if (missing.length) {
       setError("Fill in every field so helpers know what you need.");
       return;
@@ -182,7 +188,11 @@ function RequestForm({ initialValues, onSubmit, submitLabel, onCancel }) {
         <button type="submit" className="btn btn-primary" disabled={saving}>
           {saving ? "Saving…" : submitLabel}
         </button>
-        <button type="button" className="btn btn-outline-secondary" onClick={onCancel}>
+        <button
+          type="button"
+          className="btn btn-outline-secondary"
+          onClick={onCancel}
+        >
           Cancel
         </button>
       </div>

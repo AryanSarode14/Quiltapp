@@ -49,7 +49,9 @@ function RequestFormPage() {
 
   return (
     <section className="request-form-page">
-      <h1 className="page-title">{isEditing ? "Edit your request" : "Post a request"}</h1>
+      <h1 className="page-title">
+        {isEditing ? "Edit your request" : "Post a request"}
+      </h1>
       <p className="page-lede">
         Be specific about what and when. People browse by area, so choose the
         one closest to you.

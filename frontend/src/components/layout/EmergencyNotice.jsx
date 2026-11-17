@@ -3,7 +3,9 @@ import "./EmergencyNotice.css";
 
 function EmergencyNotice({ compact = false }) {
   return (
-    <p className={`emergency-notice ${compact ? "emergency-notice-compact" : ""}`}>
+    <p
+      className={`emergency-notice ${compact ? "emergency-notice-compact" : ""}`}
+    >
       Quilt is for everyday favors. In an emergency, call{" "}
       <a href="tel:911">911</a>.
     </p>

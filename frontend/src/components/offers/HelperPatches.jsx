@@ -30,10 +30,7 @@ const PATCHES = [
     name: "Golden thread",
     tone: "patch-sky",
     goal: "Average 4.5 stars from 3+ reviews",
-    progress: (s) => [
-      s.feedbackCount >= 3 && s.averageStars >= 4.5 ? 1 : 0,
-      1,
-    ],
+    progress: (s) => [s.feedbackCount >= 3 && s.averageStars >= 4.5 ? 1 : 0, 1],
   },
 ];
 
@@ -69,8 +66,7 @@ function HelperPatches() {
       <div className="helper-patches-summary">
         <h2 id="helper-patches-title">Your helper patches</h2>
         <p>
-          {stats.completed} offers completed, {stats.peopleHelped} people
-          helped
+          {stats.completed} offers completed, {stats.peopleHelped} people helped
           {stats.averageStars !== null &&
             `, ${stats.averageStars} average stars from ${stats.feedbackCount} reviews`}
           .
@@ -87,7 +83,9 @@ function HelperPatches() {
             >
               <span className="helper-patch-name">{patch.name}</span>
               <span className="helper-patch-goal">
-                {earned ? "Earned" : `${patch.goal} (${Math.min(current, target)}/${target})`}
+                {earned
+                  ? "Earned"
+                  : `${patch.goal} (${Math.min(current, target)}/${target})`}
               </span>
             </li>
           );

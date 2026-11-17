@@ -9,7 +9,11 @@ import "./MyRequestsPage.css";
 // owned by Heta Vimaleshkumar Patel
 const TABS = [
   { id: "active", label: "Active", url: "/api/requests/mine" },
-  { id: "completed", label: "Completed", url: "/api/requests/mine?view=completed" },
+  {
+    id: "completed",
+    label: "Completed",
+    url: "/api/requests/mine?view=completed",
+  },
   { id: "helping", label: "Helping", url: "/api/requests/helping" },
 ];
 
@@ -62,7 +66,8 @@ function MyRequestsPage() {
   }
 
   async function handleDelete(request) {
-    if (!window.confirm(`Delete “${request.title}”? This can't be undone.`)) return;
+    if (!window.confirm(`Delete “${request.title}”? This can't be undone.`))
+      return;
     try {
       await apiFetch(`/api/requests/${request._id}`, { method: "DELETE" });
       reload();

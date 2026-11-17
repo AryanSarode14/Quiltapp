@@ -37,5 +37,7 @@ export async function seedUsers(db, count = 40) {
 
   await collection.insertMany(docs);
   await collection.createIndex({ username: 1 }, { unique: true });
-  return collection.find({}, { projection: { username: 1, displayName: 1 } }).toArray();
+  return collection
+    .find({}, { projection: { username: 1, displayName: 1 } })
+    .toArray();
 }

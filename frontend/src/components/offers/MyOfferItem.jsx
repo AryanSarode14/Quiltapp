@@ -63,7 +63,8 @@ function MyOfferItem({ offer, onStatusChange, onDelete }) {
           <ul className="my-offer-item-feedback">
             {offer.feedback.map((item) => (
               <li key={item.userId}>
-                <StarRating value={item.stars} /> <strong>{item.displayName}</strong>
+                <StarRating value={item.stars} />{" "}
+                <strong>{item.displayName}</strong>
                 {item.comment && <p>&ldquo;{item.comment}&rdquo;</p>}
               </li>
             ))}
@@ -73,7 +74,10 @@ function MyOfferItem({ offer, onStatusChange, onDelete }) {
 
       <div className="my-offer-item-actions">
         {offer.status !== "completed" && (
-          <Link to={`/offers/${offer._id}/edit`} className="btn btn-outline-primary btn-sm">
+          <Link
+            to={`/offers/${offer._id}/edit`}
+            className="btn btn-outline-primary btn-sm"
+          >
             Edit
           </Link>
         )}

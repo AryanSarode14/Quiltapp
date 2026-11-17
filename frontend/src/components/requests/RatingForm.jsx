@@ -46,7 +46,11 @@ function RatingForm({ helperName, onSubmit }) {
         value={note}
         onChange={(e) => setNote(e.target.value)}
       />
-      <button type="submit" className="btn btn-primary btn-sm mt-2" disabled={saving}>
+      <button
+        type="submit"
+        className="btn btn-primary btn-sm mt-2"
+        disabled={saving}
+      >
         {saving ? "Sending…" : "Send thanks"}
       </button>
     </form>

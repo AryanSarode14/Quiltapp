@@ -32,7 +32,11 @@ function MyRequestItem({ request, onStatusChange, onDelete, onRate }) {
             onChange={(e) => onStatusChange(request, e.target.value)}
           >
             {REQUEST_STATUSES.map((s) => (
-              <option key={s} value={s} disabled={s !== "open" && !request.helper}>
+              <option
+                key={s}
+                value={s}
+                disabled={s !== "open" && !request.helper}
+              >
                 {s.charAt(0).toUpperCase() + s.slice(1)}
               </option>
             ))}
@@ -62,7 +66,10 @@ function MyRequestItem({ request, onStatusChange, onDelete, onRate }) {
 
       <div className="my-request-item-actions">
         {request.status !== "completed" && (
-          <Link to={`/requests/${request._id}/edit`} className="btn btn-outline-primary btn-sm">
+          <Link
+            to={`/requests/${request._id}/edit`}
+            className="btn btn-outline-primary btn-sm"
+          >
             Edit
           </Link>
         )}

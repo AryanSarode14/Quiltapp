@@ -64,7 +64,11 @@ function LoginPage() {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary w-100" disabled={submitting}>
+        <button
+          type="submit"
+          className="btn btn-primary w-100"
+          disabled={submitting}
+        >
           {submitting ? "Logging in…" : "Log in"}
         </button>
         <p className="login-page-switch">

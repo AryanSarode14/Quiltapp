@@ -49,10 +49,12 @@ function OfferFormPage() {
 
   return (
     <section className="offer-form-page">
-      <h1 className="page-title">{isEditing ? "Edit your offer" : "Post an offer"}</h1>
+      <h1 className="page-title">
+        {isEditing ? "Edit your offer" : "Post an offer"}
+      </h1>
       <p className="page-lede">
-        Already making a trip or have a free afternoon? Say when, where, and
-        how many people you can help.
+        Already making a trip or have a free afternoon? Say when, where, and how
+        many people you can help.
       </p>
 
       {loadError && (

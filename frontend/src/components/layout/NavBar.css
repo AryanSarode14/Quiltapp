@@ -42,10 +42,18 @@
   border-radius: 2px;
 }
 
-.navbar-quilt-mark span:nth-child(1) { background: var(--marigold); }
-.navbar-quilt-mark span:nth-child(2) { background: var(--rose); }
-.navbar-quilt-mark span:nth-child(3) { background: var(--moss); }
-.navbar-quilt-mark span:nth-child(4) { background: #fff; }
+.navbar-quilt-mark span:nth-child(1) {
+  background: var(--marigold);
+}
+.navbar-quilt-mark span:nth-child(2) {
+  background: var(--rose);
+}
+.navbar-quilt-mark span:nth-child(3) {
+  background: var(--moss);
+}
+.navbar-quilt-mark span:nth-child(4) {
+  background: #fff;
+}
 
 .navbar-quilt-toggle {
   display: none;

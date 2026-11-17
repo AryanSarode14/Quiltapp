@@ -4,39 +4,87 @@ import { AREAS } from "../utils/constants.js";
 
 const TEMPLATES = {
   Groceries: [
-    ["Grocery run, can shop for 2 people", "Going to the big supermarket. Send me your list the day before."],
-    ["Heading to the Indian grocery store", "Can pick up spices, rice, and snacks for a few people."],
-    ["Costco trip with space in the car", "Room for a couple of people to come along or I can shop for you."],
+    [
+      "Grocery run, can shop for 2 people",
+      "Going to the big supermarket. Send me your list the day before.",
+    ],
+    [
+      "Heading to the Indian grocery store",
+      "Can pick up spices, rice, and snacks for a few people.",
+    ],
+    [
+      "Costco trip with space in the car",
+      "Room for a couple of people to come along or I can shop for you.",
+    ],
   ],
   "Package pickup": [
-    ["Mailroom runs this week", "I'm at the mailroom every afternoon, happy to grab packages."],
+    [
+      "Mailroom runs this week",
+      "I'm at the mailroom every afternoon, happy to grab packages.",
+    ],
     ["Post office trip", "Can drop off returns or pick up held mail."],
   ],
   "Borrow an item": [
-    ["Lending a vacuum and mop", "Available to borrow for a day, just bring it back clean."],
-    ["Toolkit available to borrow", "Drill, screwdrivers, and a level. Pick up from my building."],
+    [
+      "Lending a vacuum and mop",
+      "Available to borrow for a day, just bring it back clean.",
+    ],
+    [
+      "Toolkit available to borrow",
+      "Drill, screwdrivers, and a level. Pick up from my building.",
+    ],
     ["Spare air mattress for guests", "Good for a weekend visitor."],
   ],
   Rides: [
-    ["Driving to the airport, room for 2", "Leaving campus in the morning, can fit two people with luggage."],
-    ["Weekly ride to the mall", "I go every Sunday afternoon and have three free seats."],
-    ["Driving home for break, can take 1", "Heading out of town and can drop someone along the highway."],
+    [
+      "Driving to the airport, room for 2",
+      "Leaving campus in the morning, can fit two people with luggage.",
+    ],
+    [
+      "Weekly ride to the mall",
+      "I go every Sunday afternoon and have three free seats.",
+    ],
+    [
+      "Driving home for break, can take 1",
+      "Heading out of town and can drop someone along the highway.",
+    ],
   ],
   Meals: [
-    ["Cooking a big batch of dal", "Making extra this weekend, can share a few portions."],
-    ["Extra lunch boxes on Mondays", "I meal prep and always have a couple of extra portions."],
+    [
+      "Cooking a big batch of dal",
+      "Making extra this weekend, can share a few portions.",
+    ],
+    [
+      "Extra lunch boxes on Mondays",
+      "I meal prep and always have a couple of extra portions.",
+    ],
   ],
   "Moving help": [
-    ["Free Saturday to help with moves", "Strong back and free afternoon. Small moves only."],
+    [
+      "Free Saturday to help with moves",
+      "Strong back and free afternoon. Small moves only.",
+    ],
     ["Have a hand truck, can help move", "Good for boxes and small furniture."],
   ],
   "Tech help": [
-    ["Laptop setup and troubleshooting", "CS student, happy to help install software or fix Wi-Fi issues."],
-    ["Help with resumes in Word or Docs", "Can help format resumes and cover letters."],
+    [
+      "Laptop setup and troubleshooting",
+      "CS student, happy to help install software or fix Wi-Fi issues.",
+    ],
+    [
+      "Help with resumes in Word or Docs",
+      "Can help format resumes and cover letters.",
+    ],
   ],
   Other: [
-    ["Pet sitting over the weekend", "Love animals and will be around all weekend."],
-    ["Plant watering while you travel", "Live nearby and can stop by every few days."],
+    [
+      "Pet sitting over the weekend",
+      "Love animals and will be around all weekend.",
+    ],
+    [
+      "Plant watering while you travel",
+      "Live nearby and can stop by every few days.",
+    ],
   ],
 };
 
@@ -74,7 +122,9 @@ export async function seedOffers(db, users, count = 1200) {
   for (let i = 0; i < count; i += 1) {
     const offerer = faker.helpers.arrayElement(users);
     const category = faker.helpers.arrayElement(categories);
-    const [title, description] = faker.helpers.arrayElement(TEMPLATES[category]);
+    const [title, description] = faker.helpers.arrayElement(
+      TEMPLATES[category],
+    );
     const spots = faker.number.int({ min: 1, max: 4 });
     const createdAt = faker.date.recent({ days: 45 });
     const isPast = faker.datatype.boolean(0.25);

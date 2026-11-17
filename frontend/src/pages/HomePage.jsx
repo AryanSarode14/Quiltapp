@@ -23,16 +23,22 @@ function HomePage() {
         <div className="home-hero-copy">
           <h1>Small favors, stitched into a community.</h1>
           <p>
-            Living away from family, the hard part is often knowing whom to
-            ask. Quilt is a board for your campus and neighborhood: post what
-            you need, or post a trip you&rsquo;re already making so others can
-            join in.
+            Living away from family, the hard part is often knowing whom to ask.
+            Quilt is a board for your campus and neighborhood: post what you
+            need, or post a trip you&rsquo;re already making so others can join
+            in.
           </p>
           <div className="home-hero-actions">
-            <Link to={user ? "/requests/new" : "/register"} className="btn btn-primary btn-lg">
+            <Link
+              to={user ? "/requests/new" : "/register"}
+              className="btn btn-primary btn-lg"
+            >
               Ask for help
             </Link>
-            <Link to={user ? "/offers/new" : "/register"} className="btn btn-outline-primary btn-lg">
+            <Link
+              to={user ? "/offers/new" : "/register"}
+              className="btn btn-outline-primary btn-lg"
+            >
               Offer help
             </Link>
           </div>
@@ -77,10 +83,14 @@ function HomePage() {
                 Browse <Link to="/requests">open requests</Link>. Search, filter
                 by category and area, and sort by urgency.
               </li>
-              <li>Tap &ldquo;I can help&rdquo; and reach out using the contact note.</li>
               <li>
-                Making a trip anyway? <Link to="/offers/new">Post an offer</Link>{" "}
-                with your availability and how many people you can help.
+                Tap &ldquo;I can help&rdquo; and reach out using the contact
+                note.
+              </li>
+              <li>
+                Making a trip anyway?{" "}
+                <Link to="/offers/new">Post an offer</Link> with your
+                availability and how many people you can help.
               </li>
               <li>
                 Track who claimed spots and read feedback under{" "}
@@ -91,7 +101,8 @@ function HomePage() {
         </div>
         <p className="home-privacy">
           To keep everyone safe, posts show only a general area. Contact notes
-          are shared only with the person you&rsquo;re helping or being helped by.
+          are shared only with the person you&rsquo;re helping or being helped
+          by.
         </p>
       </section>
     </div>

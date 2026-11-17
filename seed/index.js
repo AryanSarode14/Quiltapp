@@ -11,8 +11,12 @@ try {
   const users = await seedUsers(db);
   const requestCount = await seedRequests(db, users);
   const offerCount = await seedOffers(db, users);
-  console.log(`Seeded ${users.length} users, ${requestCount} help requests, ${offerCount} help offers.`);
-  console.log(`Demo logins: mansi, janvi, shivani (password: ${DEMO_PASSWORD})`);
+  console.log(
+    `Seeded ${users.length} users, ${requestCount} help requests, ${offerCount} help offers.`,
+  );
+  console.log(
+    `Demo logins: mansi, janvi, shivani (password: ${DEMO_PASSWORD})`,
+  );
 } finally {
   await closeDB();
 }

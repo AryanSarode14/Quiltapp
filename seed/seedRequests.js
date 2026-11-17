@@ -4,43 +4,109 @@ import { AREAS, URGENCY_RANK, URGENCIES } from "../utils/constants.js";
 
 const TEMPLATES = {
   Groceries: [
-    ["Milk, eggs, and bread this week", "I'm sick and can't get to the store. A small list, I'll pay you back right away."],
-    ["Pick up a few groceries", "Need rice, lentils, and vegetables from the market. Happy to Venmo in advance."],
-    ["Help carrying a big grocery order", "I don't have a car and need to bring back a heavy load of water and staples."],
+    [
+      "Milk, eggs, and bread this week",
+      "I'm sick and can't get to the store. A small list, I'll pay you back right away.",
+    ],
+    [
+      "Pick up a few groceries",
+      "Need rice, lentils, and vegetables from the market. Happy to Venmo in advance.",
+    ],
+    [
+      "Help carrying a big grocery order",
+      "I don't have a car and need to bring back a heavy load of water and staples.",
+    ],
   ],
   "Package pickup": [
-    ["Grab my package from the mailroom", "I'm away until the weekend and my package will be returned if nobody picks it up."],
-    ["Pick up a parcel at the post office", "The slip is in my name and I can send an authorization note."],
-    ["Receive a delivery for me", "A desk is arriving while I'm in class. Need someone to sign for it."],
+    [
+      "Grab my package from the mailroom",
+      "I'm away until the weekend and my package will be returned if nobody picks it up.",
+    ],
+    [
+      "Pick up a parcel at the post office",
+      "The slip is in my name and I can send an authorization note.",
+    ],
+    [
+      "Receive a delivery for me",
+      "A desk is arriving while I'm in class. Need someone to sign for it.",
+    ],
   ],
   "Borrow an item": [
-    ["Borrow a vacuum for an hour", "Moving-out inspection tomorrow and I don't own one."],
-    ["Need a drill for one shelf", "Just need to mount one shelf, will return it the same day."],
-    ["Borrow a winter coat for a trip", "Going somewhere cold for three days and only have a light jacket."],
+    [
+      "Borrow a vacuum for an hour",
+      "Moving-out inspection tomorrow and I don't own one.",
+    ],
+    [
+      "Need a drill for one shelf",
+      "Just need to mount one shelf, will return it the same day.",
+    ],
+    [
+      "Borrow a winter coat for a trip",
+      "Going somewhere cold for three days and only have a light jacket.",
+    ],
   ],
   Rides: [
-    ["Ride to the airport early morning", "Flight leaves at 7am and transit doesn't run that early. Will pay for gas."],
-    ["Ride to a doctor's appointment", "Short drive, about 20 minutes each way."],
-    ["Lift to the hardware store", "Need to buy a few heavy items for my apartment."],
+    [
+      "Ride to the airport early morning",
+      "Flight leaves at 7am and transit doesn't run that early. Will pay for gas.",
+    ],
+    [
+      "Ride to a doctor's appointment",
+      "Short drive, about 20 minutes each way.",
+    ],
+    [
+      "Lift to the hardware store",
+      "Need to buy a few heavy items for my apartment.",
+    ],
   ],
   Meals: [
-    ["Home-cooked meal while I recover", "Had a small surgery and can't cook for a few days. Vegetarian please."],
-    ["Soup during a bad cold", "Anything warm would mean a lot. I can pay for ingredients."],
-    ["Lunch on exam day", "Back-to-back exams and no time to eat. Would love a packed lunch."],
+    [
+      "Home-cooked meal while I recover",
+      "Had a small surgery and can't cook for a few days. Vegetarian please.",
+    ],
+    [
+      "Soup during a bad cold",
+      "Anything warm would mean a lot. I can pay for ingredients.",
+    ],
+    [
+      "Lunch on exam day",
+      "Back-to-back exams and no time to eat. Would love a packed lunch.",
+    ],
   ],
   "Moving help": [
-    ["Two hands to move a couch", "Moving one couch down two flights of stairs. Should take 30 minutes."],
-    ["Help packing my room", "Moving next week, need help boxing books and kitchen things."],
-    ["Carry boxes to a new apartment", "Only six boxes, new place is a short walk away."],
+    [
+      "Two hands to move a couch",
+      "Moving one couch down two flights of stairs. Should take 30 minutes.",
+    ],
+    [
+      "Help packing my room",
+      "Moving next week, need help boxing books and kitchen things.",
+    ],
+    [
+      "Carry boxes to a new apartment",
+      "Only six boxes, new place is a short walk away.",
+    ],
   ],
   "Tech help": [
     ["Set up my new laptop", "Need help installing software for my classes."],
-    ["Fix my printer connection", "Printer won't connect to Wi-Fi and I have an assignment due."],
-    ["Recover files from a USB stick", "My drive stopped showing up and it has my project files."],
+    [
+      "Fix my printer connection",
+      "Printer won't connect to Wi-Fi and I have an assignment due.",
+    ],
+    [
+      "Recover files from a USB stick",
+      "My drive stopped showing up and it has my project files.",
+    ],
   ],
   Other: [
-    ["Walk my dog for two days", "I'll be at a conference. She's friendly and small."],
-    ["Water plants while I travel", "Five plants, need watering twice over a week."],
+    [
+      "Walk my dog for two days",
+      "I'll be at a conference. She's friendly and small.",
+    ],
+    [
+      "Water plants while I travel",
+      "Five plants, need watering twice over a week.",
+    ],
     ["Proofread a cover letter", "One page, applying for an on-campus job."],
   ],
 };
@@ -70,7 +136,9 @@ export async function seedRequests(db, users, count = 1200) {
   for (let i = 0; i < count; i += 1) {
     const requester = faker.helpers.arrayElement(users);
     const category = faker.helpers.arrayElement(categories);
-    const [title, description] = faker.helpers.arrayElement(TEMPLATES[category]);
+    const [title, description] = faker.helpers.arrayElement(
+      TEMPLATES[category],
+    );
     const urgency = faker.helpers.arrayElement(URGENCIES);
     const createdAt = faker.date.recent({ days: 45 });
     const status = faker.helpers.weightedArrayElement([

@@ -15,7 +15,12 @@ export async function findUserById(id) {
   );
 }
 
-export async function createUser({ username, displayName, passwordHash, salt }) {
+export async function createUser({
+  username,
+  displayName,
+  passwordHash,
+  salt,
+}) {
   const doc = {
     username: username.toLowerCase(),
     displayName,

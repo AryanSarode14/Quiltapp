@@ -34,15 +34,21 @@ function validateOffer(body) {
     contactNote: cleanText(body.contactNote, 200),
   };
   const errors = [];
-  if (data.title.length < 4) errors.push("Add a title of at least 4 characters.");
+  if (data.title.length < 4)
+    errors.push("Add a title of at least 4 characters.");
   if (data.description.length < 10) {
     errors.push("Add a description of at least 10 characters.");
   }
   if (!CATEGORIES.includes(data.category)) errors.push("Choose a category.");
   if (!AREAS.includes(data.area)) errors.push("Choose an area.");
   if (!data.date) errors.push("Choose a date.");
-  if (!data.availability) errors.push("Add when you're available, like 10am to 1pm.");
-  if (!Number.isInteger(data.spots) || data.spots < 1 || data.spots > MAX_SPOTS) {
+  if (!data.availability)
+    errors.push("Add when you're available, like 10am to 1pm.");
+  if (
+    !Number.isInteger(data.spots) ||
+    data.spots < 1 ||
+    data.spots > MAX_SPOTS
+  ) {
     errors.push(`Spots must be a whole number from 1 to ${MAX_SPOTS}.`);
   }
   if (!data.contactNote) {
@@ -60,7 +66,9 @@ async function loadOwnedOffer(req, res) {
     return null;
   }
   if (!isOfferer(offer, req.user)) {
-    res.status(403).json({ error: "Only the person who posted this can change it." });
+    res
+      .status(403)
+      .json({ error: "Only the person who posted this can change it." });
     return null;
   }
   return offer;
@@ -71,7 +79,9 @@ router.get("/", async (req, res, next) => {
   try {
     const result = await listActiveOffers({
       search: cleanText(req.query.search, 100),
-      category: CATEGORIES.includes(req.query.category) ? req.query.category : "",
+      category: CATEGORIES.includes(req.query.category)
+        ? req.query.category
+        : "",
       area: AREAS.includes(req.query.area) ? req.query.area : "",
       sort: req.query.sort,
       page: parsePage(req.query.page),
@@ -87,7 +97,9 @@ router.get("/week", async (req, res, next) => {
   try {
     const items = await listOffersForWeek({
       search: cleanText(req.query.search, 100),
-      category: CATEGORIES.includes(req.query.category) ? req.query.category : "",
+      category: CATEGORIES.includes(req.query.category)
+        ? req.query.category
+        : "",
       area: AREAS.includes(req.query.area) ? req.query.area : "",
     });
     res.json(items);
@@ -108,7 +120,8 @@ router.get("/stats", requireAuth, async (req, res, next) => {
 // The logged-in user's own offers. ?view=past shows completed ones.
 router.get("/mine", requireAuth, async (req, res, next) => {
   try {
-    const statuses = req.query.view === "past" ? ["completed"] : ["active", "full"];
+    const statuses =
+      req.query.view === "past" ? ["completed"] : ["active", "full"];
     res.json(await listOffersByOfferer(req.user._id, statuses));
   } catch (err) {
     next(err);
@@ -179,7 +192,8 @@ router.post("/:id/claim", requireAuth, async (req, res, next) => {
     const updated = await claimSpot(req.params.id, req.user);
     if (!updated) {
       return res.status(409).json({
-        error: "This offer is full, closed, already claimed by you, or your own.",
+        error:
+          "This offer is full, closed, already claimed by you, or your own.",
       });
     }
     res.json({ ok: true });
@@ -192,7 +206,9 @@ router.delete("/:id/claim", requireAuth, async (req, res, next) => {
   try {
     const updated = await releaseSpot(req.params.id, req.user._id);
     if (!updated) {
-      return res.status(409).json({ error: "You don't have a spot on this offer." });
+      return res
+        .status(409)
+        .json({ error: "You don't have a spot on this offer." });
     }
     res.json({ ok: true });
   } catch (err) {
@@ -206,11 +222,14 @@ router.patch("/:id/status", requireAuth, async (req, res, next) => {
     if (!offer) return;
     const { status } = req.body;
     if (!OFFER_STATUSES.includes(status)) {
-      return res.status(400).json({ error: "Choose active, full, or completed." });
+      return res
+        .status(400)
+        .json({ error: "Choose active, full, or completed." });
     }
     if (status === "active" && offer.claims.length >= offer.spots) {
       return res.status(400).json({
-        error: "Every spot is claimed. Add spots by editing the offer to reopen it.",
+        error:
+          "Every spot is claimed. Add spots by editing the offer to reopen it.",
       });
     }
     res.json(await updateStatus(req.params.id, status));

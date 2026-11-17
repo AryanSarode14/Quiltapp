@@ -7,9 +7,17 @@ function StarRating({ value, onChange, label = "Rating" }) {
 
   if (!onChange) {
     return (
-      <span className="star-rating" role="img" aria-label={`${value} out of 5 stars`}>
+      <span
+        className="star-rating"
+        role="img"
+        aria-label={`${value} out of 5 stars`}
+      >
         {stars.map((n) => (
-          <span key={n} className={n <= value ? "is-on" : ""} aria-hidden="true">
+          <span
+            key={n}
+            className={n <= value ? "is-on" : ""}
+            aria-hidden="true"
+          >
             ★
           </span>
         ))}

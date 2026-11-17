@@ -70,14 +70,30 @@ h4 {
 }
 
 /* Patch colors, one per category. */
-.patch-marigold { --patch: var(--marigold); }
-.patch-denim { --patch: var(--denim); }
-.patch-rose { --patch: var(--rose); }
-.patch-moss { --patch: var(--moss); }
-.patch-clay { --patch: var(--clay); }
-.patch-plum { --patch: var(--plum); }
-.patch-sky { --patch: var(--sky); }
-.patch-stone { --patch: var(--stone); }
+.patch-marigold {
+  --patch: var(--marigold);
+}
+.patch-denim {
+  --patch: var(--denim);
+}
+.patch-rose {
+  --patch: var(--rose);
+}
+.patch-moss {
+  --patch: var(--moss);
+}
+.patch-clay {
+  --patch: var(--clay);
+}
+.patch-plum {
+  --patch: var(--plum);
+}
+.patch-sky {
+  --patch: var(--sky);
+}
+.patch-stone {
+  --patch: var(--stone);
+}
 
 .page-title {
   font-size: clamp(1.9rem, 4vw, 2.6rem);

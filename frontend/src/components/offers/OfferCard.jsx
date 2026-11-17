@@ -58,7 +58,10 @@ function OfferCard({ offer, currentUser, onClaim, onRelease, busy }) {
       <div className="offer-card-spots-row">
         <span className="offer-card-spots" aria-hidden="true">
           {Array.from({ length: offer.spots }, (_, i) => (
-            <span key={i} className={i < offer.claims.length ? "is-taken" : ""} />
+            <span
+              key={i}
+              className={i < offer.claims.length ? "is-taken" : ""}
+            />
           ))}
         </span>
         <span className="offer-card-spots-text">

@@ -35,7 +35,10 @@ export function buildWeek() {
       weekday:
         i === 0
           ? "Today"
-          : date.toLocaleDateString(undefined, { weekday: "long", timeZone: "UTC" }),
+          : date.toLocaleDateString(undefined, {
+              weekday: "long",
+              timeZone: "UTC",
+            }),
       label: date.toLocaleDateString(undefined, {
         month: "short",
         day: "numeric",

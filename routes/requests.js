@@ -35,7 +35,8 @@ function validateRequest(body) {
     contactNote: cleanText(body.contactNote, 200),
   };
   const errors = [];
-  if (data.title.length < 4) errors.push("Add a title of at least 4 characters.");
+  if (data.title.length < 4)
+    errors.push("Add a title of at least 4 characters.");
   if (data.description.length < 10) {
     errors.push("Add a description of at least 10 characters.");
   }
@@ -59,7 +60,9 @@ async function loadOwnedRequest(req, res) {
     return null;
   }
   if (!isRequester(request, req.user)) {
-    res.status(403).json({ error: "Only the person who posted this can change it." });
+    res
+      .status(403)
+      .json({ error: "Only the person who posted this can change it." });
     return null;
   }
   return request;
@@ -70,7 +73,9 @@ router.get("/", async (req, res, next) => {
   try {
     const result = await listOpenRequests({
       search: cleanText(req.query.search, 100),
-      category: CATEGORIES.includes(req.query.category) ? req.query.category : "",
+      category: CATEGORIES.includes(req.query.category)
+        ? req.query.category
+        : "",
       area: AREAS.includes(req.query.area) ? req.query.area : "",
       sort: req.query.sort,
       page: parsePage(req.query.page),
@@ -164,7 +169,9 @@ router.patch("/:id/status", requireAuth, async (req, res, next) => {
     if (!request) return;
     const { status } = req.body;
     if (!REQUEST_STATUSES.includes(status)) {
-      return res.status(400).json({ error: "Choose open, in progress, or completed." });
+      return res
+        .status(400)
+        .json({ error: "Choose open, in progress, or completed." });
     }
     if (status !== "open" && !request.helper) {
       return res.status(400).json({

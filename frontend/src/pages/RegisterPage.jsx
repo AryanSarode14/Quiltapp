@@ -16,7 +16,8 @@ function RegisterPage() {
   const [submitting, setSubmitting] = useState(false);
 
   function update(name) {
-    return (event) => setFields((prev) => ({ ...prev, [name]: event.target.value }));
+    return (event) =>
+      setFields((prev) => ({ ...prev, [name]: event.target.value }));
   }
 
   async function handleSubmit(event) {
@@ -98,7 +99,11 @@ function RegisterPage() {
             At least 8 characters.
           </div>
         </div>
-        <button type="submit" className="btn btn-primary w-100" disabled={submitting}>
+        <button
+          type="submit"
+          className="btn btn-primary w-100"
+          disabled={submitting}
+        >
           {submitting ? "Creating account…" : "Create account"}
         </button>
         <p className="register-page-switch">

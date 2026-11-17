@@ -47,7 +47,9 @@ function WeekOfferChip({ offer, currentUser, onClaim, onRelease, busy }) {
           {spotsLeft} of {offer.spots} open
         </span>
         {action}
-        {hasClaimed && <span className="week-offer-chip-mine">You&rsquo;re in</span>}
+        {hasClaimed && (
+          <span className="week-offer-chip-mine">You&rsquo;re in</span>
+        )}
       </div>
     </article>
   );

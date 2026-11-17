@@ -46,7 +46,11 @@ function FeedbackForm({ offererName, onSubmit }) {
         value={comment}
         onChange={(e) => setComment(e.target.value)}
       />
-      <button type="submit" className="btn btn-primary btn-sm mt-2" disabled={saving}>
+      <button
+        type="submit"
+        className="btn btn-primary btn-sm mt-2"
+        disabled={saving}
+      >
         {saving ? "Sending…" : "Send feedback"}
       </button>
     </form>

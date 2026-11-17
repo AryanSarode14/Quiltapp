@@ -38,7 +38,9 @@ function OffersPage() {
     const { search, category, area } = filters;
     const request =
       view === "week"
-        ? apiFetch(`/api/offers/week?${toQueryString({ search, category, area })}`)
+        ? apiFetch(
+            `/api/offers/week?${toQueryString({ search, category, area })}`,
+          )
         : apiFetch(`/api/offers?${toQueryString({ ...filters, page })}`);
 
     request
@@ -116,7 +118,11 @@ function OffersPage() {
         <p className="offers-page-count" aria-live="polite">
           {loading ? "Loading offers…" : countText}
         </p>
-        <div className="offers-page-views" role="group" aria-label="View offers as">
+        <div
+          className="offers-page-views"
+          role="group"
+          aria-label="View offers as"
+        >
           {VIEWS.map((v) => (
             <button
               key={v.id}
@@ -159,7 +165,12 @@ function OffersPage() {
             type="button"
             className="btn btn-outline-primary"
             onClick={() =>
-              handleFiltersChange({ search: "", category: "", area: "", sort: "soonest" })
+              handleFiltersChange({
+                search: "",
+                category: "",
+                area: "",
+                sort: "soonest",
+              })
             }
           >
             Show all offers
@@ -182,7 +193,11 @@ function OffersPage() {
               </li>
             ))}
           </ul>
-          <Pagination page={page} totalPages={result.totalPages} onPageChange={setPage} />
+          <Pagination
+            page={page}
+            totalPages={result.totalPages}
+            onPageChange={setPage}
+          />
         </>
       )}
     </section>

@@ -74,7 +74,10 @@ function RequestsPage() {
             People nearby who could use a hand. Pick one you can help with.
           </p>
         </div>
-        <Link to={user ? "/requests/new" : "/login"} className="btn btn-primary">
+        <Link
+          to={user ? "/requests/new" : "/login"}
+          className="btn btn-primary"
+        >
           Post a request
         </Link>
       </div>
@@ -103,7 +106,12 @@ function RequestsPage() {
             type="button"
             className="btn btn-outline-primary"
             onClick={() =>
-              handleFiltersChange({ search: "", category: "", area: "", sort: "urgency" })
+              handleFiltersChange({
+                search: "",
+                category: "",
+                area: "",
+                sort: "urgency",
+              })
             }
           >
             Show all requests
@@ -124,7 +132,11 @@ function RequestsPage() {
         </ul>
       )}
 
-      <Pagination page={page} totalPages={result.totalPages} onPageChange={setPage} />
+      <Pagination
+        page={page}
+        totalPages={result.totalPages}
+        onPageChange={setPage}
+      />
     </section>
   );
 }

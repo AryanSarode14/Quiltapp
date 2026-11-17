@@ -14,7 +14,12 @@ function OfferWeekView({ offers, currentUser, onClaim, onRelease, busyId }) {
   });
 
   return (
-    <div className="offer-week-view" role="region" aria-label="Offers this week" tabIndex={0}>
+    <div
+      className="offer-week-view"
+      role="region"
+      aria-label="Offers this week"
+      tabIndex={0}
+    >
       <ol className="offer-week-view-days">
         {days.map((day) => {
           const dayOffers = byDay[day.key] || [];
