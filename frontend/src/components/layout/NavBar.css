@@ -1,0 +1,116 @@
+.navbar-quilt {
+  background: var(--denim);
+  color: #fff;
+  border-bottom: 3px dashed rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 -6px 0 var(--denim);
+}
+
+.navbar-quilt-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  gap: 0.75rem;
+}
+
+.navbar-quilt-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-quilt-brand:hover {
+  color: #fff;
+}
+
+.navbar-quilt-mark {
+  display: grid;
+  grid-template-columns: repeat(2, 12px);
+  gap: 2px;
+}
+
+.navbar-quilt-mark span {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.navbar-quilt-mark span:nth-child(1) { background: var(--marigold); }
+.navbar-quilt-mark span:nth-child(2) { background: var(--rose); }
+.navbar-quilt-mark span:nth-child(3) { background: var(--moss); }
+.navbar-quilt-mark span:nth-child(4) { background: #fff; }
+
+.navbar-quilt-toggle {
+  display: none;
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  padding: 0.35rem 0.8rem;
+}
+
+.navbar-quilt-links {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-quilt-links a:not(.btn) {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-quilt-links a:not(.btn):hover,
+.navbar-quilt-links a.active {
+  color: #fff;
+  border-bottom-color: var(--marigold);
+}
+
+.navbar-quilt-user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar-quilt-cta {
+  background: var(--marigold);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.navbar-quilt-cta:hover {
+  background: #f5c25c;
+  color: var(--ink);
+}
+
+@media (max-width: 860px) {
+  .navbar-quilt-toggle {
+    display: inline-block;
+  }
+
+  .navbar-quilt-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding-top: 0.5rem;
+  }
+
+  .navbar-quilt-links.is-open {
+    display: flex;
+  }
+}

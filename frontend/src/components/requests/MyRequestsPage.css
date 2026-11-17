@@ -1,0 +1,31 @@
+.my-requests-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.my-requests-page-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.my-requests-page-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+  max-width: 820px;
+}
+
+.my-requests-page-empty {
+  padding: 2rem 1rem;
+  text-align: center;
+  border: 2px dashed var(--thread);
+  border-radius: 8px;
+  max-width: 820px;
+}

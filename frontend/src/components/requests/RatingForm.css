@@ -1,0 +1,15 @@
+.rating-form {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff8e8;
+  border-radius: 6px;
+}
+
+.rating-form h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.rating-form legend {
+  color: var(--ink);
+}

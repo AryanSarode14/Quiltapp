@@ -1,0 +1,33 @@
+.request-filters {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr) auto;
+  gap: 0.9rem;
+  align-items: end;
+  background: #fff;
+  border-radius: 6px;
+  padding: 1rem 1.1rem;
+  margin: 1.25rem 0 1.5rem;
+  box-shadow: 0 1px 0 var(--thread);
+}
+
+.request-filters .form-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 991px) {
+  .request-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .request-filters-search {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 540px) {
+  .request-filters {
+    grid-template-columns: 1fr;
+  }
+}

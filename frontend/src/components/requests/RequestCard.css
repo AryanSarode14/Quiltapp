@@ -1,0 +1,54 @@
+.request-card-description {
+  color: #3e4966;
+  flex: 1;
+}
+
+.request-card-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 1rem;
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+}
+
+.request-card-meta dt {
+  font-weight: 400;
+  color: #5b6680;
+  font-size: 0.82rem;
+}
+
+.request-card-meta dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.request-card-urgency {
+  text-transform: capitalize;
+  padding: 0 0.5rem;
+  border-radius: 4px;
+}
+
+.urgency-high {
+  background: #fbe1e6;
+  color: #9c2f45;
+}
+
+.urgency-medium {
+  background: #fdf0d3;
+  color: #7a5308;
+}
+
+.urgency-low {
+  background: #e3efe4;
+  color: #35603a;
+}
+
+.request-card-action {
+  position: relative;
+  z-index: 1;
+}
+
+.request-card-own {
+  font-size: 0.9rem;
+  color: #5b6680;
+}
