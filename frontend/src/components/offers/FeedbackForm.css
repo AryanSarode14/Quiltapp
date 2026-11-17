@@ -1,0 +1,11 @@
+.feedback-form {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #eef4ee;
+  border-radius: 6px;
+}
+
+.feedback-form h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}

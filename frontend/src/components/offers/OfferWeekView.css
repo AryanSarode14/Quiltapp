@@ -1,0 +1,55 @@
+.offer-week-view {
+  overflow-x: auto;
+  background: var(--ink);
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.offer-week-view-days {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(190px, 1fr));
+  gap: 8px;
+}
+
+.offer-week-view-day {
+  background: var(--linen);
+  border-radius: 2px;
+  padding: 0.75rem 0.6rem;
+  min-height: 260px;
+  outline: 2px dashed var(--thread);
+  outline-offset: -6px;
+}
+
+.offer-week-view-day h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1rem;
+  padding: 0 0.3rem 0.5rem;
+  margin-bottom: 0.6rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.offer-week-view-day h3 span {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #5b6680;
+}
+
+.offer-week-view-day ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.offer-week-view-empty {
+  color: #5b6680;
+  font-size: 0.9rem;
+  padding: 0 0.3rem;
+}

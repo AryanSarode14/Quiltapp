@@ -1,0 +1,38 @@
+.week-offer-chip {
+  background: #fff;
+  border-left: 6px solid var(--patch);
+  border-radius: 3px;
+  padding: 0.6rem 0.7rem;
+}
+
+.week-offer-chip-category {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #4a5571;
+}
+
+.week-offer-chip h4 {
+  font-size: 0.98rem;
+  line-height: 1.25;
+  margin: 0.15rem 0 0.3rem;
+}
+
+.week-offer-chip-meta {
+  font-size: 0.85rem;
+  color: #4a5571;
+  margin: 0 0 0.5rem;
+}
+
+.week-offer-chip-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.week-offer-chip-mine {
+  color: var(--moss);
+}

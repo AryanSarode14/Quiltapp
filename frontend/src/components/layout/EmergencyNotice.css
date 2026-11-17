@@ -1,0 +1,18 @@
+.emergency-notice {
+  margin: 0;
+  padding: 0.6rem 0.9rem;
+  border-left: 4px solid var(--rose);
+  background: #fdf0f2;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+}
+
+.emergency-notice a {
+  font-weight: 700;
+  color: #9c2f45;
+}
+
+.emergency-notice-compact {
+  font-size: 0.875rem;
+  padding: 0.4rem 0.75rem;
+}
