@@ -1,0 +1,35 @@
+.request-form {
+  background: #fff;
+  border-top: 10px solid var(--denim);
+  border-radius: 4px;
+  padding: 1.5rem;
+  max-width: 720px;
+}
+
+.request-form-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.request-form fieldset {
+  border: 0;
+  padding: 0;
+}
+
+.request-form legend {
+  float: none;
+  font-size: 1rem;
+}
+
+.request-form-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .request-form-row {
+    grid-template-columns: 1fr;
+  }
+}

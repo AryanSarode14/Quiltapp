@@ -1,0 +1,28 @@
+.requests-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.requests-page-count {
+  color: #5b6680;
+  font-size: 0.95rem;
+}
+
+.requests-page-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.requests-page-empty {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border: 2px dashed var(--thread);
+  border-radius: 8px;
+}

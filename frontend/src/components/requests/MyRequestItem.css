@@ -1,0 +1,44 @@
+.my-request-item {
+  background: #fff;
+  border-left: 8px solid var(--denim);
+  border-radius: 4px;
+  padding: 1.1rem 1.25rem;
+}
+
+.my-request-item-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.my-request-item h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.my-request-item-meta,
+.my-request-item-helper {
+  margin: 0 0 0.5rem;
+  color: #4a5571;
+}
+
+.my-request-item-status {
+  min-width: 160px;
+}
+
+.my-request-item-status .form-label {
+  font-size: 0.85rem;
+  margin-bottom: 0.15rem;
+}
+
+.my-request-item-rating p {
+  margin: 0.25rem 0 0;
+  font-style: italic;
+}
+
+.my-request-item-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}

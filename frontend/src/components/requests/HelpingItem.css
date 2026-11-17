@@ -1,0 +1,31 @@
+.helping-item {
+  background: #fff;
+  border-left: 8px solid var(--moss);
+  border-radius: 4px;
+  padding: 1.1rem 1.25rem;
+}
+
+.helping-item h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.helping-item-meta {
+  color: #4a5571;
+  margin-bottom: 0.5rem;
+}
+
+.helping-item-contact {
+  margin: 0;
+}
+
+.helping-item-thanks {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--thread);
+}
+
+.helping-item-thanks p {
+  margin: 0.25rem 0 0;
+  font-style: italic;
+}
