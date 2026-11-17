@@ -1,0 +1,107 @@
+/* On the offers board, patches are tinted with their fabric color. */
+.patch-card.offer-card {
+  background: color-mix(in srgb, var(--patch) 9%, #fff);
+  border-top: 0;
+  border-radius: 2px;
+  padding: 1.25rem 1.2rem 1.2rem;
+  box-shadow: none;
+}
+
+.patch-card.offer-card::after {
+  inset: 6px;
+  border-width: 2px;
+  opacity: 0.6;
+}
+
+/* A fabric label sewn onto the corner for offers happening very soon. */
+.offer-card-tag {
+  position: absolute;
+  top: -6px;
+  right: 14px;
+  z-index: 2;
+  padding: 0.35rem 0.7rem 0.45rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 0 0 4px 4px;
+  transform: rotate(2deg);
+}
+
+.offer-card-tag-today {
+  background: var(--rose);
+  color: #fff;
+}
+
+.offer-card-tag-tomorrow {
+  background: var(--marigold);
+  color: var(--ink);
+}
+
+.offer-card-description {
+  color: #3e4966;
+  flex: 1;
+}
+
+.offer-card-spots-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.9rem;
+}
+
+/* One square per spot; claimed spots are filled in like sewn patches. */
+.offer-card-spots {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.offer-card-spots span {
+  width: 18px;
+  height: 18px;
+  border: 2px dashed var(--patch);
+  border-radius: 3px;
+  background: #fff;
+}
+
+.offer-card-spots span.is-taken {
+  border-style: solid;
+  background: var(--patch);
+}
+
+.offer-card-spots-text {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.offer-card-meta {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+}
+
+.offer-card-meta div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.offer-card-meta dt {
+  font-weight: 400;
+  color: #5b6680;
+  min-width: 5.5rem;
+}
+
+.offer-card-meta dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.offer-card-note {
+  font-size: 0.9rem;
+  color: #4a5571;
+}
+
+.offer-card-action {
+  position: relative;
+  z-index: 2;
+}

@@ -1,0 +1,66 @@
+.my-offer-item {
+  background: #fff;
+  border-left: 8px solid var(--marigold);
+  border-radius: 4px;
+  padding: 1.1rem 1.25rem;
+}
+
+.my-offer-item-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.my-offer-item h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.my-offer-item-meta {
+  color: #4a5571;
+}
+
+.my-offer-item-status {
+  min-width: 160px;
+}
+
+.my-offer-item-status .form-label {
+  font-size: 0.85rem;
+  margin-bottom: 0.15rem;
+}
+
+.my-offer-item-subhead {
+  font-size: 0.98rem;
+  margin: 0.75rem 0 0.35rem;
+}
+
+.my-offer-item-muted {
+  color: #5b6680;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.my-offer-item-claims,
+.my-offer-item-feedback {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.my-offer-item-claims li,
+.my-offer-item-feedback li {
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed var(--thread);
+}
+
+.my-offer-item-feedback p {
+  margin: 0.15rem 0 0;
+  font-style: italic;
+}
+
+.my-offer-item-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}

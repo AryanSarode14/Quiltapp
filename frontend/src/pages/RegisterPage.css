@@ -1,0 +1,17 @@
+.register-page {
+  max-width: 440px;
+  margin: 1rem auto;
+}
+
+.register-page-form {
+  background: #fff;
+  border-top: 10px solid var(--marigold);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.register-page-switch {
+  margin: 1rem 0 0;
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+.login-page {
+  max-width: 440px;
+  margin: 1rem auto;
+}
+
+.login-page-form {
+  background: #fff;
+  border-top: 10px solid var(--denim);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.login-page-switch {
+  margin: 1rem 0 0;
+  text-align: center;
+}

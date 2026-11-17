@@ -1,0 +1,17 @@
+.claimed-offers-page-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 1rem;
+  max-width: 820px;
+}
+
+.claimed-offers-page-empty {
+  margin-top: 1.5rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  border: 2px dashed var(--thread);
+  border-radius: 8px;
+  max-width: 820px;
+}

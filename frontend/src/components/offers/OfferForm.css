@@ -1,0 +1,30 @@
+.offer-form {
+  background: #fff;
+  border-top: 10px solid var(--marigold);
+  border-radius: 4px;
+  padding: 1.5rem;
+  max-width: 720px;
+}
+
+.offer-form-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.offer-form-row-two {
+  grid-template-columns: 1fr 1fr;
+}
+
+.offer-form-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .offer-form-row,
+  .offer-form-row-two {
+    grid-template-columns: 1fr;
+  }
+}
