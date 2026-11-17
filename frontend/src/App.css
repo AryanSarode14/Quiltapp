@@ -1,0 +1,97 @@
+/* Global design tokens and Bootstrap overrides shared by every component. */
+:root {
+  --ink: #1f2a44;
+  --denim: #2e3a59;
+  --linen: #f5f7fa;
+  --thread: #c9d2e0;
+  --marigold: #f2b134;
+  --rose: #d9667b;
+  --moss: #5e8c61;
+  --clay: #b5835a;
+  --plum: #7a5c99;
+  --sky: #4f8cc9;
+  --stone: #8c8c84;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+
+  --bs-body-font-family: var(--font-body);
+  --bs-body-color: var(--ink);
+  --bs-body-bg: var(--linen);
+  --bs-link-color: var(--denim);
+  --bs-link-hover-color: var(--ink);
+  --bs-link-color-rgb: 46, 58, 89;
+  --bs-link-hover-color-rgb: 31, 42, 68;
+}
+
+body {
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--denim);
+  --bs-btn-border-color: var(--denim);
+  --bs-btn-hover-bg: var(--ink);
+  --bs-btn-hover-border-color: var(--ink);
+  --bs-btn-active-bg: var(--ink);
+  --bs-btn-active-border-color: var(--ink);
+  --bs-btn-disabled-bg: var(--denim);
+  --bs-btn-disabled-border-color: var(--denim);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--denim);
+  --bs-btn-border-color: var(--denim);
+  --bs-btn-hover-bg: var(--denim);
+  --bs-btn-hover-border-color: var(--denim);
+  --bs-btn-active-bg: var(--ink);
+  --bs-btn-active-border-color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--marigold);
+  outline-offset: 2px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--denim);
+  box-shadow: 0 0 0 0.2rem rgba(242, 177, 52, 0.45);
+}
+
+/* Patch colors, one per category. */
+.patch-marigold { --patch: var(--marigold); }
+.patch-denim { --patch: var(--denim); }
+.patch-rose { --patch: var(--rose); }
+.patch-moss { --patch: var(--moss); }
+.patch-clay { --patch: var(--clay); }
+.patch-plum { --patch: var(--plum); }
+.patch-sky { --patch: var(--sky); }
+.patch-stone { --patch: var(--stone); }
+
+.page-title {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-bottom: 0.25rem;
+}
+
+.page-lede {
+  max-width: 60ch;
+  color: #4a5571;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

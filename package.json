@@ -1,0 +1,37 @@
+{
+  "name": "quilt",
+  "version": "1.0.0",
+  "description": "Quilt: a campus and neighborhood board for exchanging everyday favors.",
+  "type": "module",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node seed/index.js",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend",
+    "lint": "eslint . && npm run lint --prefix frontend",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "author": "Heta Vimaleshkumar Patel and Trupal Jageshkumar Patel",
+  "license": "MIT",
+  "dependencies": {
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "mongodb": "^6.10.0",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@faker-js/faker": "^9.2.0",
+    "eslint": "^9.15.0",
+    "globals": "^15.12.0",
+    "prettier": "^3.3.3"
+  }
+}

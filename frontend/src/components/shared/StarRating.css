@@ -1,0 +1,34 @@
+.star-rating {
+  color: #c9ccd4;
+  letter-spacing: 0.05em;
+}
+
+.star-rating .is-on {
+  color: var(--marigold);
+}
+
+.star-rating-input {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.star-rating-input legend {
+  float: none;
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+
+.star-rating-input button {
+  background: none;
+  border: 0;
+  font-size: 1.6rem;
+  line-height: 1;
+  padding: 0.1rem 0.15rem;
+  color: #c9ccd4;
+  cursor: pointer;
+}
+
+.star-rating-input button.is-on {
+  color: var(--marigold);
+}

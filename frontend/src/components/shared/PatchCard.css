@@ -1,0 +1,38 @@
+.patch-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border-top: 10px solid var(--patch);
+  border-radius: 4px;
+  padding: 1.1rem 1.15rem 1.15rem;
+  box-shadow: 0 1px 0 var(--thread);
+}
+
+/* The dashed inner line reads as stitching. */
+.patch-card::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1.5px dashed var(--patch);
+  border-radius: 2px;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.patch-card-category {
+  align-self: flex-start;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--patch) 18%, #fff);
+  border-radius: 999px;
+  padding: 0.1rem 0.65rem;
+  margin-bottom: 0.6rem;
+}
+
+.patch-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
