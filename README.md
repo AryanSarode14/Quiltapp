@@ -8,7 +8,7 @@ Community support and help exchange for students living away from family.
 
 **Live app:** https://quiltapp.onrender.com
 
-**Demo video:** REPLACE_WITH_VIDEO_LINK
+**Demo video:** https://youtu.be/PMfS5-C8Qus
 
 **Design document:** [design-document.pdf](design-document.pdf) (Markdown version: [docs/design-document.md](docs/design-document.md))
 
