@@ -10,7 +10,7 @@ Community support and help exchange for students living away from family.
 
 **Demo video:** REPLACE_WITH_VIDEO_LINK
 
-**Design document:** [design/design-document.md](design/design-document.md)
+**Design document:** [design-document.pdf](design-document.pdf) (Markdown version: [docs/design-document.md](docs/design-document.md))
 
 ## Project objective
 
@@ -22,7 +22,21 @@ pieces of help make a supportive community.
 
 Quilt is for everyday favors, not emergencies. In an emergency, call 911.
 
-![Quilt screenshot](design/screenshot.png)
+![Quilt home page](docs/images/home.png)
+
+## Screenshots
+
+| Home                               | Offers: quilt board                                 |
+| ---------------------------------- | --------------------------------------------------- |
+| ![Home page](docs/images/home.png) | ![Offers quilt board](docs/images/offers-board.png) |
+
+| Open requests                              | My claimed spots                                   |
+| ------------------------------------------ | -------------------------------------------------- |
+| ![Open requests](docs/images/requests.png) | ![My claimed spots](docs/images/claimed-spots.png) |
+
+| Log in                           | Join Quilt                              |
+| -------------------------------- | --------------------------------------- |
+| ![Log in](docs/images/login.png) | ![Join Quilt](docs/images/register.png) |
 
 ## Features
 
@@ -133,6 +147,8 @@ auth/                  Password hashing and Passport strategy
 db/                    MongoDB connection and one module per collection
 routes/                auth, requests (Heta), offers (Trupal)
 seed/                  Synthetic data generators
+design-document.pdf    Design document (PDF)
+docs/                  Design document (Markdown), mockups, screenshots, thumbnail
 frontend/src/
   components/layout    Layout (Trupal), NavBar (Heta), EmergencyNotice
   components/shared    PatchCard, Pagination, StarRating, ProtectedRoute
@@ -145,9 +161,11 @@ Each React component lives in its own file with a matching CSS file.
 
 ## Use of AI
 
-REPLACE: Describe how AI was used, as required by the course policy. For
-example, which tool and model you used, which parts it generated, and what you
-reviewed, changed, and tested yourselves.
+We used Claude (Anthropic) to brainstorm and refine the project idea, to
+generate a first version of the code, to draft the design document, and to
+create the wireframe mockups and the thumbnail. We reviewed, ran, and tested
+the app ourselves, fixed the bugs we found, merged our work through pull
+requests, and each of us can explain our own part of the code.
 
 ## License
 
