@@ -10,6 +10,10 @@ Community support and help exchange for students living away from family.
 
 **Demo video:** https://youtu.be/PMfS5-C8Qus
 
+**Presentation video:** https://youtu.be/B0uSDcJKuvI
+
+**Slides:** https://docs.google.com/presentation/d/13tQG-h5nn3-b5C339QzsjwyMYvQN2s5Z/edit?usp=sharing
+
 **Design document:** [design-document.pdf](design-document.pdf) (Markdown version: [docs/design-document.md](docs/design-document.md))
 
 ## Project objective
