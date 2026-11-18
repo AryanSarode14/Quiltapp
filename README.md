@@ -4,9 +4,9 @@ Community support and help exchange for students living away from family.
 
 **Authors:** Heta Vimaleshkumar Patel and Trupal Jageshkumar Patel
 
-**Class:** [CS 5610 Web Development, Northeastern University](REPLACE_WITH_CLASS_LINK)
+**Class:** [CS 5610 Web Development, Northeastern University](https://johnguerra.co/classes/webDevelopment_online_fall_2026/)
 
-**Live app:** REPLACE_WITH_DEPLOYED_URL
+**Live app:** https://quiltapp.onrender.com
 
 **Demo video:** REPLACE_WITH_VIDEO_LINK
 
