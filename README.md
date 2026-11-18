@@ -138,9 +138,8 @@ npm run format    # Prettier for all files
 
 1. Push the repository to GitHub (`.env` is git-ignored).
 2. Create a Render **Web Service** from the repository.
-3. Build command: `npm install && npm run build`. Start command: `npm start`.
-4. Add environment variables `MONGO_URI`, `DB_NAME`, `SESSION_SECRET`, and
-   `NODE_ENV=production`.
+3. Build command: `npm install && npm install --prefix frontend --include=dev && npm run build --prefix frontend`. Start command: `npm start`.
+4. Add environment variables `MONGO_URI`, `DB_NAME`, `SESSION_SECRET`, `NODE_ENV=production`, and `NODE_VERSION=22`.
 5. In MongoDB Atlas, allow connections from Render's IP addresses.
 
 ## Project structure
@@ -151,6 +150,8 @@ auth/                  Password hashing and Passport strategy
 db/                    MongoDB connection and one module per collection
 routes/                auth, requests (Heta), offers (Trupal)
 seed/                  Synthetic data generators
+middleware/            requireAuth (protects logged-in routes)
+utils/                 Shared constants and query helpers
 design-document.pdf    Design document (PDF)
 docs/                  Design document (Markdown), mockups, screenshots, thumbnail
 frontend/src/
